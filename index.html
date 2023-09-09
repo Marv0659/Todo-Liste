@@ -4,18 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 
     <title>Todo Liste</title>
 </head>
 <body>
-    <h1>Marv's Todo Liste</h1>
-    <div>
-        <input type="text" id="taskString" placeholder="Task String" required>
-        <input type="number" id="quantity" placeholder="Quantity" required>
-        <button onclick="addTask()">Add Task</button>
-        <button onclick="undoDeletion()">Undo Deletion</button>
-    </div>
+    <div class="headerContainer">
+    <div class="header"><h1 >Marv's Todo Liste</h1></div>
+</div>
+    
+   
+     <div class="inputContainer">
+        <input type="text" id="taskString" placeholder="Beskrivelse" required>
+        <input type="number" id="quantity" placeholder="Antal" required>
+        <button id="addTaskbtn">Tilføj</button>
+        <button id="undoTaskbtn">Fortryd</button>
+    </div> 
+
+    
+
+
+    <div class="container">
+    <div class="taskListDiv">
+        <h2>Nuværende Opgaver</h1>
     <ul id="taskList"></ul>
+    </div>
+
+    <div class="completedTaskListDiv">
+        <h2>Færdige Opgaver</h1>
+            <div class="ulDiv">
+        <ul id="completedTaskList"></ul>
+    </div>
+    </div>
+</div>
     
     
 </body>

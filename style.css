@@ -1,7 +1,120 @@
 body{
-    background-color: #00076f;
+    background-color: #e0e0e0;
 }
 
-h1{
-    color: #9f45b0;
+h1, h2{
+    color: grey;
+    font-family: 'Ubuntu', sans-serif;
+
 }
+
+
+
+
+.header{
+    display: flex;
+    justify-content: center;
+    color: grey;
+}
+
+.header h1 {
+    color: grey;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+
+.completedTaskListDiv, .taskListDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    background: #e0e0e0;
+    margin: 2rem;
+    border-radius: 50px;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+    height: 55rem;
+
+}
+
+.ulDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    color: grey;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    border-radius: 10px;
+    border-radius: 10px;
+background: #e0e0e0;
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+
+li{
+    margin: 1.5rem;
+}
+
+
+
+
+button {
+    color: #090909;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+               
+  }
+
+
+  
+  button:hover {
+    border: 1px solid white;
+  }
+  
+  button:active {
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+  }
+
+  .inputContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+  }
+
+  input {
+    width: 200px;
+    height: 45px;
+    border: none;
+    outline: none;
+    padding: 0px 7px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 15px;
+    background-color: transparent;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+  }
+
+  input:focus {
+    border: 2px solid transparent;
+    color: black;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+  }
+
+
