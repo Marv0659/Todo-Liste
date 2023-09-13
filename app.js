@@ -24,24 +24,6 @@ function addTask() {
             }
         }
 
-function undoDeletion() {
-     if (deletedTasks.length > 0) {
-            const undoneTask = deletedTasks.pop();
-            tasks.push(undoneTask);
-            tasks.sort((a, b) => a.id - b.id);
-            renderTasks();
-            }
-        }
-
-        function deleteTask(taskId) {
-            const deletedTask = tasks.find(task => task.id === taskId);
-        
-            if (deletedTask) {
-                tasks.splice(tasks.indexOf(deletedTask), 1);
-                deletedTasks.push(deletedTask);
-                renderTasks();
-            }
-        }
 
         function markAsDone(taskId) {
             const taskIndex = tasks.findIndex(task => task.id === taskId);
@@ -53,6 +35,30 @@ function undoDeletion() {
                 renderCompletedTasks();
             }
         }
+
+
+        function deleteTask(taskId) {
+            const deletedTask = tasks.find(task => task.id === taskId);
+        
+            if (deletedTask) {
+                tasks.splice(tasks.indexOf(deletedTask), 1);
+                deletedTasks.push(deletedTask);
+                renderTasks();
+            }
+        }
+
+function undoDeletion() {
+     if (deletedTasks.length > 0) {
+            const undoneTask = deletedTasks.pop();
+            tasks.push(undoneTask);
+            tasks.sort((a, b) => a.id - b.id);
+            renderTasks();
+            }
+        }
+
+        
+
+        
 
 
 
