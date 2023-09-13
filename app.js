@@ -56,13 +56,6 @@ function undoDeletion() {
             }
         }
 
-        
-
-        
-
-
-
-        
 
         function clearInputs() {
             taskStringInput.value = "";
