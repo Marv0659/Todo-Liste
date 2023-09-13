@@ -34,10 +34,10 @@ function undoDeletion() {
         }
 
         function deleteTask(taskId) {
-            const taskIndex = tasks.findIndex(task => task.id === taskId);
-
-            if (taskIndex !== -1) {
-                const deletedTask = tasks.splice(taskIndex, 1)[0];
+            const deletedTask = tasks.find(task => task.id === taskId);
+        
+            if (deletedTask) {
+                tasks.splice(tasks.indexOf(deletedTask), 1);
                 deletedTasks.push(deletedTask);
                 renderTasks();
             }
@@ -88,3 +88,5 @@ function undoDeletion() {
                 completedTaskList.appendChild(li);
             });
         }
+
+        
